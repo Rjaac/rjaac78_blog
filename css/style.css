@@ -1,56 +1,78 @@
 /* --- CSS Variables (Good Practice!) --- */
 :root {
-    --bg-color: #0a0a0a;        /* Very dark background */
-    --text-color: #00ff00;     /* Classic neon green */
-    --header-color: #ff00ff;   /* Neon pink for contrast */
-    --link-color: #00ffff;     /* Neon cyan for links */
-    --border-color: #333333;   /* Dark grey for borders */
-    --font-main: 'VT323', monospace; /* Use the Google Font, fallback to generic monospace */
+    --bg-color: #0a0a0a;
+    /* Very dark background */
+    --text-color: #00ff00;
+    /* Classic neon green */
+    --header-color: #ff00ff;
+    /* Neon pink for contrast */
+    --link-color: #00ffff;
+    /* Neon cyan for links */
+    --border-color: #333333;
+    /* Dark grey for borders */
+    --font-main: 'VT323',
+    monospace;
+    /* Use the Google Font, fallback to generic monospace */
 }
 
 /* --- Basic Reset & Body Styling --- */
-* { /* Selects everything - simple reset */
+* {
+    /* Selects everything - simple reset */
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Makes width/height include padding/border */
+    box-sizing: border-box;
+    /* Makes width/height include padding/border */
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-main);
-    font-size: 20px; /* VT323 often looks better slightly larger */
+    font-size: 20px;
+    /* VT323 often looks better slightly larger */
     line-height: 1.6;
-    padding: 1rem; /* Add some space around the edges */
+    padding: 1rem;
+    /* Add some space around the edges */
     /* We can add effects like scanlines later */
 }
 
 /* --- Header & Navigation --- */
 .main-header {
-    border-bottom: 1px solid var(--text-color); /* Green line */
+    border-bottom: 1px solid var(--text-color);
+    /* Green line */
     margin-bottom: 2rem;
     padding-bottom: 1rem;
 }
 
 .main-header h1 {
-    color: var(--header-color); /* Use pink for main heading */
-    font-size: 2.8rem; /* Slightly larger H1 */
-    text-shadow: 0 0 5px var(--header-color); /* Add a glow */
-    margin-bottom: 0.5rem; /* Space below H1 */
+    color: var(--header-color);
+    /* Use pink for main heading */
+    font-size: 2.8rem;
+    /* Slightly larger H1 */
+    text-shadow: 0 0 5px var(--header-color);
+    /* Add a glow */
+    margin-bottom: 0.5rem;
+    /* Space below H1 */
 }
 
 .main-nav a {
-    color: var(--link-color); /* Cyan links */
-    text-decoration: none; /* Remove underline */
+    color: var(--link-color);
+    /* Cyan links */
+    text-decoration: none;
+    /* Remove underline */
     margin-right: 1rem;
-    font-size: 1.4rem; /* Larger nav links */
-    display: inline-block; /* Allows setting padding/margin correctly */
-    padding: 2px 5px; /* Small padding for hover effect */
+    font-size: 1.4rem;
+    /* Larger nav links */
+    display: inline-block;
+    /* Allows setting padding/margin correctly */
+    padding: 2px 5px;
+    /* Small padding for hover effect */
 }
 
 .main-nav a:hover {
     background-color: var(--link-color);
-    color: var(--bg-color); /* Invert colors on hover */
+    color: var(--bg-color);
+    /* Invert colors on hover */
 }
 
 /* --- Main Content Area --- */
@@ -59,23 +81,28 @@ body {
     margin-bottom: 1.5rem;
     border-bottom: 1px dashed var(--text-color);
     padding-bottom: 0.5rem;
-    font-size: 2rem; /* Larger section headings */
+    font-size: 2rem;
+    /* Larger section headings */
 }
 
 .post-summary {
-    border: 1px solid var(--border-color); /* Subtle border */
+    border: 1px solid var(--border-color);
+    /* Subtle border */
     padding: 1rem;
     margin-bottom: 1.5rem;
-    background-color: #111; /* Slightly lighter dark background */
+    background-color: #111;
+    /* Slightly lighter dark background */
 }
 
 .post-summary h3 {
-    font-size: 1.6rem; /* Larger post titles */
+    font-size: 1.6rem;
+    /* Larger post titles */
     margin-bottom: 0.5rem;
 }
 
 .post-summary h3 a {
-    color: var(--text-color); /* Green post titles */
+    color: var(--text-color);
+    /* Green post titles */
     text-decoration: none;
 }
 
@@ -83,32 +110,33 @@ body {
     color: var(--link-color);
 }
 
-
-
 .post-meta {
-    font-size: 0.9rem; /* Smaller meta text */
-    color: #aaaaaa; /* Grey for meta */
+    font-size: 0.9rem;
+    /* Smaller meta text */
+    color: #aaaaaa;
+    /* Grey for meta */
     margin-top: 0.5rem;
 }
 
-/* ... (previous styles like .post-summary, etc.) ... */
-
 /* --- List & Item Styling --- */
-dt
- {
+dt {
     font-weight: bold;
     margin-top: 0.8em;
 }
-dd
- {
-    margin-left: 1.5em; /* Indent description/details */
+
+dd {
+    margin-left: 1.5em;
+    /* Indent description/details */
     margin-bottom: 0.3em;
 }
 
-.search-hint { /* Class used for 'Search in:' lines */
+.search-hint {
+    /* Class used for 'Search in:' lines */
     font-style: italic;
-    color: #bbb; /* Lighter grey for hints */
-    font-size: 0.9em; /* Slightly smaller */
+    color: #bbb;
+    /* Lighter grey for hints */
+    font-size: 0.9em;
+    /* Slightly smaller */
 }
 
 /* --- Footer --- */
@@ -119,4 +147,115 @@ dd
     text-align: center;
     font-size: 0.9rem;
     color: #aaaaaa;
+}
+
+/* --- Photo Gallery Styles --- */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.photo-item {
+    width: 300px;
+    /* Adjust as needed */
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    background-color: #111;
+}
+
+.photo-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.photo-description {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* --- Code Display Styles (Updated) --- */
+.code-post {
+    margin-bottom: 2rem;
+    /* Space between code posts */
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    background-color: #111;
+}
+
+.code-post h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.code-meta {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.code-snippet {
+    background-color: #222;
+    /* Slightly darker background for code */
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    /* Allow horizontal scrolling for long code */
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #00ff00;
+    /* Match your text color */
+}
+
+.code-description {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+/* --- Photo Post Styles --- */
+.photo-post {
+    margin-bottom: 2rem;
+    /* Space between photo posts */
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    background-color: #111;
+}
+
+.photo-post h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.photo-meta {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.photo-item {
+    /* Removed width from here, allow to adapt */
+    max-width: 100%;
+    /* Image takes full width of container */
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.photo-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.photo-description {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1rem;
 }

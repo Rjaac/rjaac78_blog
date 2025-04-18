@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID_ROOT :: Exec Files</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* Add specific styles for code display here */
+        .code-post {
+            margin-bottom: 2rem;
+            /* Space between code posts */
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            background-color: #111;
+        }
+
+        .code-post h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .code-meta {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 1rem;
+        }
+
+        .code-snippet {
+            background-color: #222;
+            /* Slightly darker background for code */
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #00ff00;
+        }
+
+        .code-description {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>&gt; SYSTEM_ROOT</h1>
+        <nav class="main-nav">
+            <a href="index.html">[ ROOT_DIR ]</a>
+            <a href="books.html">[ WORD_PROCESSOR ]</a>
+            <a href="photos.html">[ SCREEN_GRABS ]</a>
+            <a href="code.html">[ EXEC_FILES ]</a>
+        </nav>
+    </header>
+
+    <main class="content-area">
+        <h2>Exec Files</h2>
+        <p>A repository of code fragments, historical hacks, and digital exploits (Transmissions).</p>
+
+        <section class="code-post">
+            <h3>Historical Exploit: The Morris Worm (1988)</h3>
+            <p class="code-meta">DATE: 2025.04.25 // Operator: Rjaac78 // LOCATION: Setúbal Terminal //</p>
+
+            <p class="code-description">
+                One of the first widespread internet worms, it exploited vulnerabilities in Unix systems.
+                It wasn't designed to be destructive, but its rapid spread caused significant slowdowns.
+            </p>
+            <pre class="code-snippet">
+                /* Simplified C-like pseudocode - the actual worm was more complex */
+                #include &lt;stdio.h&gt;
+                #include &lt;stdlib.h&gt;
+                #include &lt;unistd.h&gt;
+
+                int main() {
+                    // 1. Try to break into remote systems
+                    if (attempt_login("remote_host", "some_user", "some_password")) {
+                        // 2. If successful, replicate itself
+                        replicate_self("remote_host");
+                    }
+
+                    return 0;
+                }
+
+                bool attempt_login(char *host, char *user, char *pass) {
+                    // Code to try various login methods (e.g., buffer overflows)
+                    printf("Trying to log into %s...\n", host);
+                    // ... (Implementation details omitted)
+                    return rand() % 2; // Simulate success/failure
+                }
+
+                void replicate_self(char *host) {
+                    // Code to copy the worm's code to the remote system
+                    printf("Replicating to %s...\n", host);
+                    // ... (Implementation details omitted)
+                }
+            </pre>
+            <p>
+                The Morris Worm exploited vulnerabilities in `sendmail`, `fingerd`, and `rsh/rexec`.
+                Its impact highlighted the importance of computer security and led to the formation of the first
+                Computer Emergency Response Team (CERT).
+            </p>
+        </section>
+
+        <section class="code-post">
+            <h3>Modern Snippet: Asynchronous JavaScript (async/await)</h3>
+            <p class="code-meta">DATE: 2025.04.24 // Operator: Rjaac78 // LOCATION: Setúbal Terminal //</p>
+
+            <p class="code-description">
+                Demonstrates how to handle promises in JavaScript for cleaner asynchronous code.
+            </p>
+            <pre class="code-snippet">
+                async function fetchData(url) {
+                    try {
+                        const response = await fetch(url);
+                        const data = await response.json();
+                        return data;
+                    } catch (error) {
+                        console.error("Error fetching data:", error);
+                        throw error;
+                    }
+                }
+
+                // Example usage:
+                async function main() {
+                    try {
+                        const posts = await fetchData("https://jsonplaceholder.typicode.com/posts");
+                        console.log("Fetched posts:", posts);
+                        // Do something with the posts
+                    } catch (error) {
+                        // Handle the error
+                    }
+                }
+
+                main();
+            </pre>
+            <p>
+                `async` allows you to define asynchronous functions, and `await` pauses execution until a Promise is resolved.
+                This makes asynchronous code look and behave more like synchronous code, improving readability and maintainability.
+            </p>
+        </section>
+
+        </main>
+
+    <footer class="main-footer">
+        <p>// CONNECTION ACTIVE :: GRID_ROOT :: SECURE_CHANNEL //</p>
+        <p>&copy; 2025 // Rjaac78@gmail.com // Location: Setúbal Terminal //</p>
+    </footer>
+
+</body>
+
+</html>
